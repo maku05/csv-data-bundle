@@ -1,0 +1,19 @@
+<div class="form-registration form-small">
+    <form action="/api/user" method="post" class="ajax">
+        <div class="form-group email">
+            <label for="ctrl_email" class="sr-only">{{ 'csv.form.email.label'|trans }}</label>
+            <input type="text" id="ctrl_email" class="form-control" name="email" required/>
+        </div>
+        <div class="form-group  password">
+            <label for="ctrl_password" class="sr-only">{{ 'csv.form.password.label'|trans }}</label>
+            <input type="password" id="ctrl_password" class="form-control" name="password" required/>
+        </div>
+        <div class="form-group  passwordConfirmation">
+            <label for="ctrl_passwordConfirmation" class="sr-only">{{ 'csv.form.password.label'|trans }}</label>
+            <input type="password" id="ctrl_passwordConfirmation" class="form-control" name="passwordConfirmation" required/>
+        </div>
+        <div class="form-group  submit">
+            <button type="submit" id="ctrl_submit" class="btn btn-primary">{{ 'csv.form.registration.submit.label'|trans }}</button>
+        </div>
+    </form>
+</div>

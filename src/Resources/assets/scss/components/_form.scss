@@ -1,0 +1,53 @@
+form {
+  input,
+  select {
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+    font-family: $font-family-base;
+    color: $text-color;
+  }
+
+  label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+
+  input {
+    border: 1px solid #eee;
+  }
+
+  select {
+    font-size: $font-size-base;
+    background: $gray-lighter;
+    border: none;
+  }
+
+  .formbody {
+    margin-bottom: 2rem;
+  }
+
+  .submit-container {
+    text-align: right;
+  }
+
+}
+
+.form-small{
+  margin: 0 auto;
+  width: 40%;
+  min-width: 320px;
+
+  input,
+  select,
+  label {
+    width: 100%;
+  }
+
+  .form-group {
+    &.submit{
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

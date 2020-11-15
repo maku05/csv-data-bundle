@@ -1,0 +1,24 @@
+<div class="text-container">
+    <h1>{{ 'csv.login.headline'|trans }}</h1>
+    {{ 'csv.login.text'|trans|raw }}
+</div>
+
+
+<div class="form-login form-small">
+    <form action="/api/token" method="post" class="ajax mb-4">
+        <div class="form-group email">
+            <label for="ctrl_email">{{ 'csv.form.email.label'|trans }}</label>
+            <input type="text" id="ctrl_email" name="email"/>
+        </div>
+        <div class="form-group password">
+            <label for="ctrl_password">{{ 'csv.form.password.label'|trans }}</label>
+            <input type="password" id="ctrl_password" name="password"/>
+        </div>
+        <div class="form-group submit">
+            <button type="submit" id="ctrl_submit" class="btn btn-primary">{{ 'csv.form.login.submit.label'|trans }}</button>
+        </div>
+    </form>
+    <div class="action-container">
+        <a href="/registration" role="button" title="{{ 'csv.user.link.toRegistration'|trans }}" class="btn btn-simple registration-link">{{ 'csv.user.link.label'|trans }}</a>
+    </div>
+</div>

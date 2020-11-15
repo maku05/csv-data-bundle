@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    public: true
+
+  Maku05\CSVDataBundle\:
+    resource: "../../{Entity,Repository,Security,Util}/*"
+
+  Maku05\CSVDataBundle\Controller\:
+    resource: '../../Controller/'
+    tags: [ 'controller.service_arguments' ]
+

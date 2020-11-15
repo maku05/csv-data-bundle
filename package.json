@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "core-js": "^3.0.0",
+    "filepond": "^4.23.1",
+    "chart.js": "^2.9.4",
+    "@yaireo/tagify": "^3.21.0",
+    "jump.js": "^1.0.2"
+  },
+  "license": "proprietary",
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "version": "1.0.0"
+}

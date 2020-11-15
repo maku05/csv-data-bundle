@@ -1,0 +1,48 @@
+.btn {
+  border: none;
+  border-radius: 2px;
+  padding: .5rem 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: none !important;
+  }
+}
+
+.btn-primary {
+  background: $brand-primary;
+  color: $white;
+  font-size: $font-size-lg;
+  transition: .3s all;
+
+  &:hover {
+    background: darken($brand-primary, 5%);
+    transition: .3s all;
+  }
+
+}
+
+.btn-simple {
+  color: $brand-primary;
+  background: transparent;
+  font-size: $font-size-lg;
+}
+
+.add-category-trigger{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+
+  svg {
+    width: 25px;
+    height: 25px;
+    margin-right: .5rem;
+
+    path {
+      fill: $brand-primary;
+    }
+  }
+}

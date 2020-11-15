@@ -1,0 +1,32 @@
+{
+  "name": "maku05/csv-data-bundle",
+  "description": "A bundle to analyze a csv file by different categories.",
+  "type": "symfony-bundle",
+  "require": {
+    "symfony/framework-bundle": "5.1.*",
+    "symfony/translation": "5.1.*",
+    "symfony/twig-bundle": "5.1.*",
+    "symfony/webpack-encore-bundle": "^1.8",
+    "symfony/yaml": "5.1.*",
+    "sensio/framework-extra-bundle": "^5.6",
+    "maku05/user-authentication-bundle": "^0.1"
+  },
+  "require-dev": {
+    "foxy/foxy": "^1.0.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Martin Kunitzsch",
+      "email": "m.kunitzsch@protonmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Maku05\\CSVDataBundle\\": "src/"
+    }
+  },
+  "extra": {
+    "foxy": true
+  }
+}

@@ -1,0 +1,11 @@
+.logout-container {
+  width: 60%;
+  margin: 0 auto;
+  text-align: right;
+
+  .logout-trigger {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: inline-block;
+  }
+}

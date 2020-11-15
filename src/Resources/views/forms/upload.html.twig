@@ -1,0 +1,27 @@
+<form action="/api/chart" method="post" class="upload" id="csv-data-upload">
+    <div class="formbody">
+        <input type="hidden" id="csvDataHidden" name="csvData" value=""/>
+        <input type="file" name="filepond" class="upload-field skip-localStorage" />
+        <select name="valueColumn">
+            <option value="">{{ 'csv.form.valueColumn.label'|trans }}</option>
+            <option value="remove">{{ 'csv.form.csvData.selectFile'|trans }}</option>
+        </select>
+        <select name="dateColumn">
+            <option value="">{{ 'csv.form.dateColumn.label'|trans }}</option>
+            <option value="remove">{{ 'csv.form.csvData.selectFile'|trans }}</option>
+        </select>
+        <div class="category-wrapper">
+            {% include 'forms/partials/category.html.twig' %}
+        </div>
+        <button class="btn btn-simple add-category-trigger">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,1A11,11,0,1,0,23,12,11.013,11.013,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9.01,9.01,0,0,1,12,21Zm5-9a1,1,0,0,1-1,1H13v3a1,1,0,0,1-2,0V13H8a1,1,0,0,1,0-2h3V8a1,1,0,0,1,2,0v3h3A1,1,0,0,1,17,12Z"/></svg>
+            {{ 'csv.form.add_category.label'|trans }}
+        </button>
+
+    </div>
+    <div class="submit-container">
+        <button class="btn btn-primary" type="submit">
+            {{ 'csv.chart.create'|trans }}
+        </button>
+    </div>
+</form>

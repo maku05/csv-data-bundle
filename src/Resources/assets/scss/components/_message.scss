@@ -1,0 +1,21 @@
+.message-container {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  padding: 3rem;
+  z-index: 9;
+}
+
+.alert {
+  border: 1px solid $alert-default-border-color;
+  color: $alert-default-color;
+  background-color: $alert-default-background-color;
+  padding: .75rem 1.25rem;
+
+  &.alert-danger {
+    color: $alert-danger-color;
+    background-color: $alert-danger-background-color;
+    border-color: $alert-danger-border-color;
+  }
+}

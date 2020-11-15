@@ -1,0 +1,29 @@
+<div class="category-container" id="category-container-{{ id|default(1) }}">
+    <div class="dismiss-category">
+        <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+             width="600px" height="400px" viewBox="0 0 600 400" enable-background="new 0 0 600 400" xml:space="preserve">
+        <path d="M429.637,70.364c-71.597-71.596-187.677-71.596-259.273,0c-71.596,71.596-71.596,187.676,0,259.272
+            c71.596,71.597,187.676,71.597,259.272,0C501.112,257.99,501.112,142.01,429.637,70.364z M193.934,306.067
+            c-58.579-58.579-58.579-153.554,0-212.132s153.554-58.579,212.132,0c58.579,58.579,58.579,153.553,0,212.132
+            C347.449,364.553,252.551,364.552,193.934,306.067z M358.926,258.926c-6.509,6.509-17.062,6.508-23.571-0.001L300,223.57
+            l-35.355,35.355c-6.509,6.509-17.061,6.51-23.57,0.001s-6.509-17.062,0-23.57L276.43,200l-35.355-35.355
+            c-6.509-6.509-6.509-17.062-0.001-23.57c6.509-6.509,17.062-6.509,23.571,0L300,176.43l35.355-35.355
+            c6.509-6.509,17.062-6.509,23.57,0s6.508,17.061-0.001,23.57L323.569,200l35.355,35.355
+            C365.434,241.864,365.435,252.417,358.926,258.926z"/>
+        </svg>
+    </div>
+    <div class="top-container">
+        <div class="input-group group-category">
+            <label for="#category-input-{{ id|default(1) }}">{{ 'csv.form.category.label'|trans }}</label>
+            <input id="category-input-{{ id|default(1) }}" class="category-input" name="category[]" type="text" value="" />
+        </div>
+        <div class="input-group group-color">
+            <label for="#category-color-{{ id|default(1) }}">{{ 'csv.form.color.label'|trans }}</label>
+            <input id="category-color-{{ id|default(1) }}" class="category-color" name="category[][color]" type="color" value="#034a87" />
+        </div>
+    </div>
+    <div class="tag-wrapper">
+        <span class="label">{{ 'csv.form.tags.label'|trans }}</span>
+        {% include 'forms/partials/tag.html.twig' %}
+    </div>
+</div>

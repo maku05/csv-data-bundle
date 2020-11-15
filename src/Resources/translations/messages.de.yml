@@ -1,0 +1,53 @@
+# form
+csv.form.add_category.label: Kategorie hinzufügen
+csv.form.add_tag.label: Suchbegriff hinzufügen
+csv.form.category.label: Kategorie
+csv.form.tags.label: Suchbegriff
+csv.form.color.label: Farbe auswählen
+csv.form.valueColumn.label: In welchem Feld befindet sich der darzustellende Wert
+csv.form.dateColumn.label: In welchem Feld befindet sich der Zeitangabe zum darzustellenden Wert
+csv.form.csvData.selectFile: Fügen Sie eine CSV-Datei hinzu.
+
+csv.form.csvData.error: Sie haben keine Datei ausgewählt. Bitte Wählen Sie eine geeignete CSV-Datei und fügen Sie diese dem Formular hinzu.
+csv.form.valueColumn.error: Bitte wählen Sie eine Option für "In welchem Feld befindet sich der Geldbetrag".
+csv.form.dateColumn.error: Bitte wählen Sie eine Option für "In welchem Feld befindet sich der Zeitpunkt der Buchung".
+csv.form.category.error: Sie haben keine Datei ausgewählt. Bitte Wählen Sie eine geeignete CSV-Datei und fügen Sie diese dem Formular hinzu.
+
+csv.form.email.label: Email
+csv.form.password.label: Passwort
+csv.form.passwordConfirmation.label: Passwort bestätigen
+csv.form.login.submit.label: anmelden
+csv.form.registration.submit.label: registrieren
+
+# user
+csv.user.message.created.success: Sie haben sich erfolgreich registriert. Sie werden gleich weiter geleitet.
+csv.user.message.error.email.notFound: Zu dieser E-Mail-Adresse existiert kein Benutzer.
+csv.user.message.error.insufficientData: Die gegbenen Daten sind unzureichend. Bitte gib Email und Password an und bestätige das Passwort.
+csv.user.logout: abmelden
+
+csv.user.message.error.password.wrong: Das eingegebene Passwort ist nicht korrekt.
+csv.user.message.error.password.short: Das eingegebene Passwort ist zu kurz. Bitte verwenden Sie mindestens 8 Zeichen.
+
+csv.user.link.toRegistration: Als neuer Nutzer registrieren.
+csv.user.link.label: Nutzer registrieren
+
+# chart
+csv.chart.title: Umsätze
+csv.chart.months.january: Januar
+csv.chart.months.february: Februar
+csv.chart.months.march: März
+csv.chart.months.april: April
+csv.chart.months.may: Mai
+csv.chart.months.june: Juni
+csv.chart.months.july: Juli
+csv.chart.months.august: August
+csv.chart.months.september: September
+csv.chart.months.october: Oktober
+csv.chart.months.november: November
+csv.chart.months.december: Dezember
+csv.chart.category.default: Sonstiges
+csv.chart.create: Diagramm erstellen
+
+# pages
+csv.login.headline: Herzlich Willkommen
+csv.login.text: <p>Diese App bietet eine Möglichkeit finanzielle Ausgaben zu analysieren und optisch übersichtlich darzustellen.</p><p>Bitte loggen Sie sich über das Formular ein. Falls Sie noch keinen Account haben können Sie sich einfach schnell registrieren.</p>
