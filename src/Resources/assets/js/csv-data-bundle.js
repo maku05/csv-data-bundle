@@ -8,24 +8,24 @@ import 'filepond/dist/filepond.min.css';
 import '@yaireo/tagify/dist/tagify.css';
 require('../scss/project.scss');
 
-class CSVApp {
+class CSVBundle {
   static init() {
-    CSVApp.initForm();
-    CSVApp.initChart();
-    CSVApp.initUser()
+    CSVBundle.initUploadForm();
+    CSVBundle.initChart();
+    CSVBundle.initUser()
   }
 
-  static initForm() {
+  static initUploadForm() {
     let form = document.querySelector('form.upload');
 
     if(!form) {
       return;
     }
 
-    CSVApp.initFormSubmit();
-    CSVApp.initFormCategories();
-    CSVApp.initTagFields();
-    CSVApp.initUpload();
+    CSVBundle.initFormSubmit();
+    CSVBundle.initFormCategories();
+    CSVBundle.initTagFields();
+    CSVBundle.initUpload();
   }
 
   // form action
@@ -38,11 +38,11 @@ class CSVApp {
       let formData = new FormData(form),
           action = form.getAttribute('action'),
           config = {
-            onSuccess: CSVApp.onChartResponse,
-            onError: CSVApp.onError
+            onSuccess: CSVBundle.onChartResponse,
+            onError: CSVBundle.onError
           };
 
-      CSVApp.doPostRequest(action, formData, config,{});
+      CSVBundle.doPostRequest(action, formData, config,{});
     });
   }
 
@@ -123,10 +123,7 @@ class CSVApp {
     jump('.chart-container', {
       duration: 500
     });
-
   }
-
-
 
 
   // field configuration
@@ -155,7 +152,7 @@ class CSVApp {
       let tagsInputFields = container.querySelectorAll('.tag-input'),
           colorInputField = container.querySelector('.category-color');
 
-      CSVApp.updateTagInputFields(tagsInputFields, e.target.value);
+      CSVBundle.updateTagInputFields(tagsInputFields, e.target.value);
 
       colorInputField.name = 'category[' + e.target.value + '][color]';
     });
@@ -174,11 +171,11 @@ class CSVApp {
 
         action = '/form/addCategory/' + categoryCount,
             config = {
-              onSuccess: CSVApp.onAddCategoryResponse
+              onSuccess: CSVBundle.onAddCategoryResponse
             }
       }
 
-      CSVApp.doPostRequest(action, {}, config, {});
+      CSVBundle.doPostRequest(action, {}, config, {});
     });
 
     document.addEventListener('click', function(e) {
@@ -224,9 +221,9 @@ class CSVApp {
 
   // user actions
   static initUser() {
-    CSVApp.initRegistration();
-    CSVApp.initLogin();
-    CSVApp.initLogout();
+    CSVBundle.initRegistration();
+    CSVBundle.initLogin();
+    CSVBundle.initLogout();
   }
 
   static initLogin() {
@@ -238,8 +235,7 @@ class CSVApp {
 
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-
-      CSVApp.initAuthorization();
+      CSVBundle.initAuthorization();
     });
   }
 
@@ -256,11 +252,11 @@ class CSVApp {
       let formData = new FormData(form),
           action = form.getAttribute('action'),
           config = {
-            onSuccess: CSVApp.onRegistrationResponse,
-            onError: CSVApp.onError
+            onSuccess: CSVBundle.onRegistrationResponse,
+            onError: CSVBundle.onError
           };
 
-      CSVApp.doPostRequest(action, formData, config);
+      CSVBundle.doPostRequest(action, formData, config);
     });
   }
 
@@ -290,15 +286,14 @@ class CSVApp {
         password = formData.get('password'),
         action = "/api/token",
         config = {
-          onSuccess: CSVApp.onTokenResponse,
-          onError: CSVApp.onError
+          onSuccess: CSVBundle.onTokenResponse,
+          onError: CSVBundle.onError
         },
         headers = {
           "Authorization": "Basic " + btoa(email + ":" + password)
         };
 
-
-    CSVApp.doPostRequest(action,{}, config, headers);
+    CSVBundle.doPostRequest(action,{}, config, headers);
   }
 
   // async responses
@@ -311,7 +306,7 @@ class CSVApp {
     }
 
     if(data.chartConfig) {
-      CSVApp.initChart(data.chartConfig);
+      CSVBundle.initChart(data.chartConfig);
     }
   }
 
@@ -336,22 +331,14 @@ class CSVApp {
       categoryWrapper.classList.add('multiple-categories');
     }
 
-    CSVApp.initTagFields();
+    CSVBundle.initTagFields();
   }
 
   static onRegistrationResponse() {
     let data = JSON.parse(this);
 
     if(data.success) {
-      CSVApp.initAuthorization();
-    }
-  }
-
-  static onLoginResponse() {
-    let data = JSON.parse(this);
-
-    if(data.success) {
-      initAuthorization
+      CSVBundle.initAuthorization();
     }
   }
 
@@ -372,13 +359,12 @@ class CSVApp {
     }
 
     let message = document.createElement('div');
-
     if(!data.template) {
       message.classList.add('message-container');
       message.classList.add('alert');
       message.classList.add('alert-danger');
-      message.innerText = data.error;
 
+      message.innerHTML = CSVBundle.getFormErrorMessage(data)
     } else {
       message.innerHTML = data.template;
       message = message.firstChild;
@@ -386,20 +372,33 @@ class CSVApp {
 
     document.body.append(message);
 
-
     setTimeout(() => {
       document.querySelector('.message-container').remove();
     }, 5000);
   }
 
 
+  static getFormErrorMessage(data) {
+    let wrapper = document.querySelector('.csv-data-wrapper');
+    if(!wrapper) {
+      return data.message;
+    }
+
+    let config = JSON.parse(wrapper.dataset.config);
+    if(!config) {
+      return data.message;
+    }
+
+    return config[data.error];
+  }
+
 
   // request action
   static doPostRequest(url, formData, config, headers) {
-    let request = CSVApp.createRequest(url);
+    let request = CSVBundle.createRequest(url);
 
     if(headers) {
-      request = CSVApp.applyAdditionalHeaders(request, headers);
+      request = CSVBundle.applyAdditionalHeaders(request, headers);
     }
 
     request.onload = function() {
@@ -436,6 +435,6 @@ class CSVApp {
 }
 
 
-document.addEventListener('DOMContentLoaded', CSVApp.init());
+document.addEventListener('DOMContentLoaded', CSVBundle.init());
 
 

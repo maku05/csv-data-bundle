@@ -53,6 +53,7 @@ to you `webpack.config.js` add the bundle entry
 - move modifying of config files to symfony recipe
 - multifile support
 - support different file formats
+- keep values on page reload
 
 
 

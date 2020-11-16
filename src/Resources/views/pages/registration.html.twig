@@ -1,6 +1,10 @@
 {% extends 'pages/default.html.twig' %}
-{% block body %}
+{% block content %}
     <div class="form-container">
+        <div class="text-container">
+            <h1>{{ 'csv.registration.headline'|trans }}</h1>
+            {{ 'csv.registration.text'|trans|raw }}
+        </div>
         {% include 'forms/registration.html.twig' %}
     </div>
 {% endblock %}

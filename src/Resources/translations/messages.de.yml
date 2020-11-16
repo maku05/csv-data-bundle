@@ -2,10 +2,10 @@
 csv.form.add_category.label: Kategorie hinzufügen
 csv.form.add_tag.label: Suchbegriff hinzufügen
 csv.form.category.label: Kategorie
-csv.form.tags.label: Suchbegriff
+csv.form.tags.label: Suchbegriffe
 csv.form.color.label: Farbe auswählen
-csv.form.valueColumn.label: In welchem Feld befindet sich der darzustellende Wert
-csv.form.dateColumn.label: In welchem Feld befindet sich der Zeitangabe zum darzustellenden Wert
+csv.form.valueColumn.label: CSV-Spalte der darzustellenden Werte
+csv.form.dateColumn.label: CSV-Spalte mit Datumsangaben
 csv.form.csvData.selectFile: Fügen Sie eine CSV-Datei hinzu.
 
 csv.form.csvData.error: Sie haben keine Datei ausgewählt. Bitte Wählen Sie eine geeignete CSV-Datei und fügen Sie diese dem Formular hinzu.
@@ -19,6 +19,12 @@ csv.form.passwordConfirmation.label: Passwort bestätigen
 csv.form.login.submit.label: anmelden
 csv.form.registration.submit.label: registrieren
 
+csv.form.general.error.noUser: Es konnte kein Nutzer zur angegebenen Email-Adresse gefunden werden.
+csv.form.general.error.wrongPassword: Das angegbene Passwort ist nicht korrekt.
+csv.form.registration.error.passwordUnequal: Die angegebenen Passwörter stimmen nicht überein.
+csv.form.registration.error.passwordLength: Das angegebene Passwort ist zu kurz. Stellen Sie sicher, dass es mindesten 8 Zeichen lang ist.
+csv.form.registration.error.dataInsufficient: Es wurden nicht alle notwendigen Felder ausgefüllt.
+
 # user
 csv.user.message.created.success: Sie haben sich erfolgreich registriert. Sie werden gleich weiter geleitet.
 csv.user.message.error.email.notFound: Zu dieser E-Mail-Adresse existiert kein Benutzer.
@@ -29,7 +35,7 @@ csv.user.message.error.password.wrong: Das eingegebene Passwort ist nicht korrek
 csv.user.message.error.password.short: Das eingegebene Passwort ist zu kurz. Bitte verwenden Sie mindestens 8 Zeichen.
 
 csv.user.link.toRegistration: Als neuer Nutzer registrieren.
-csv.user.link.label: Nutzer registrieren
+csv.user.link.label: registrieren
 
 # chart
 csv.chart.title: Umsätze
@@ -49,5 +55,11 @@ csv.chart.category.default: Sonstiges
 csv.chart.create: Diagramm erstellen
 
 # pages
-csv.login.headline: Herzlich Willkommen
-csv.login.text: <p>Diese App bietet eine Möglichkeit finanzielle Ausgaben zu analysieren und optisch übersichtlich darzustellen.</p><p>Bitte loggen Sie sich über das Formular ein. Falls Sie noch keinen Account haben können Sie sich einfach schnell registrieren.</p>
+csv.login.headline: CSV Data Bundle
+csv.login.text: <p>Herzlich willkommen!</p>
+                <p>Mit diesem Tool lässt sich eine CSV-Datei nach gesetzten Kategorien und deren Schlagwörtern in ein Linien-Diagramm überführen</p>
+                <p>Bitte loggen Sie sich über das Formular ein. Falls Sie noch keinen Account haben können Sie sich einfach schnell registrieren.</p>
+
+csv.registration.headline: Registrierung
+csv.registration.text: <p>Bitte füllen die das folgende Formular aus und registrieren Sie sich im System.</p>
+                       <p>Bei erfolgreicher Registrierung werden Sie anschließen direkt zum Formular für die CSV-Analyse weitergeleitet.</p>

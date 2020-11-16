@@ -3,6 +3,12 @@
 {% block stylesheets %}
     {{ encore_entry_link_tags('csv-data-bundle') }}
 {% endblock %}
+{% block body %}
+<div class="csv-data-wrapper" data-config="{{ config|default }}">
+    {% block content %}
+    {% endblock %}
+</div>
+{% endblock %}
 
 {% block javascripts %}
     {{ encore_entry_script_tags('csv-data-bundle') }}
